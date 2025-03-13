@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink Studio - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about {
+            min-height: 100vh;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: #1a1a1a;
+            clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .about-content {
+            z-index: 1;
+            text-align: center;
+            max-width: 700px;
+        }
+
+        .about-content h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                padding: 20px;
+            }
+
+            .about-content h1 {
+                font-size: 32px;
+            }
+
+            .about-content p {
+                font-size: 16px;
+            }
+
+            .back-link {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about">
+        <a href="landing.html" class="back-link">← Back to Home</a>
+        <div class="about-content">
+            <h1>About Linus Tattoos  Studio</h1>
+            <p> Linus Tattoo Studio is where art meets skin. Our team of skilled artists specializes in custom designs, from bold traditional pieces to intricate minimalist tattoos.</p>
+            <p>We’re more than a studio—we’re a community of creators dedicated to making your vision a reality. With a focus on quality, hygiene, and creativity, we’ve built a reputation as the go-to spot for ink enthusiasts.</p>
+        </div>
+    </div>
+</body>
+</html>
