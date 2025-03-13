@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink Studio - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact {
+            min-height: 100vh;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: #1a1a1a;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+        }
+
+        .contact-content {
+            z-index: 1;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .contact-content h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .contact-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .contact-info {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #fff;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ccc;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .contact {
+                padding: 20px;
+            }
+
+            .contact-content h1 {
+                font-size: 32px;
+            }
+
+            .contact-content p {
+                font-size: 16px;
+            }
+
+            .contact-info {
+                padding: 15px;
+            }
+
+            .contact-info p {
+                font-size: 14px;
+            }
+
+            .back-link {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <a href="landing.html" class="back-link">← Back to Home</a>
+        <div class="contact-content">
+            <h1>Contact Us</h1>
+            <p>Got questions or ready to book? Reach out to us—we’re here to bring your tattoo ideas to life.</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:info@linustattoostudio.com">info@inkstudio.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+256 777017284</a></p>
+                <p>Address: Acacia plot 1 bukoto street</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

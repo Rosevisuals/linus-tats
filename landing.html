@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink Studio - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Alternative landing-specific styles */
+        .landing {
+            min-height: 100vh;
+            background: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .landing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1a1a1a 50%, #000 50%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+            z-index: 0;
+        }
+
+        .landing-content {
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .landing-content h1 {
+            font-size: 54px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+            border-bottom: 4px solid #fff;
+            display: inline-block;
+            padding-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .landing-content h1:hover {
+            border-color: #ccc;
+            transform: translateY(-5px);
+        }
+
+        .landing-content p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #ddd;
+        }
+
+        .cta-cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .cta-card {
+            background: #222;
+            padding: 20px 40px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .cta-card:hover {
+            background: #fff;
+            color: #000;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .cta-card.disabled {
+            background: #111;
+            border-color: #666;
+            color: #666;
+            cursor: not-allowed;
+        }
+
+        .cta-card.disabled:hover {
+            background: #111;
+            color: #666;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .landing-nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1;
+        }
+
+        .landing-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .landing-nav a:hover {
+            color: #ccc;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .landing-content h1 {
+                font-size: 36px;
+                letter-spacing: 2px;
+            }
+
+            .landing-content p {
+                font-size: 16px;
+            }
+
+            .cta-cards {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .cta-card {
+                padding: 15px 30px;
+                min-width: 150px;
+            }
+
+            .landing-nav {
+                top: 10px;
+                right: 10px;
+            }
+
+            .landing-nav a {
+                font-size: 14px;
+                margin-left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing">
+        <div class="landing-nav">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="landing-content">
+            <h1>Linus Tattos Studio</h1>
+            <p>Unleash your vision with our expert artists. Staff, manage your day. Clients, your ink awaits.</p>
+        </div>
+        <div class="cta-cards">
+            <a href="index.html" class="cta-card">Staff Dashboard</a>
+            <a href="#" class="cta-card disabled">Client Booking (Coming Soon)</a>
+        </div>
+    </div>
+</body>
+</html>

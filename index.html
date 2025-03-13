@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink Studio - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Linus Tattoos Studio</h2>
+            <ul>
+                <li class="active"><a href="index.html">Dashboard</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <button id="toggleSidebar" class="toggle-btn">☰</button>
+            <div class="header">
+                <h1>Booking Dashboard</h1>
+            </div>
+
+            <div class="booking-section">
+                <h2>Studio Analytics</h2>
+                <div class="analytics">
+                    <div class="analytic-item">
+                        <h3>Total Bookings</h3>
+                        <p id="totalBookings">0</p>
+                    </div>
+                    <div class="analytic-item">
+                        <h3>Estimated Revenue</h3>
+                        <p id="totalRevenue">$0</p>
+                    </div>
+                    <div class="analytic-item">
+                        <h3>Pending Payments</h3>
+                        <p id="pendingPayments">0</p>
+                    </div>
+                    <div class="analytic-item">
+                        <h3>Busiest Artist</h3>
+                        <p id="busiestArtist">None</p>
+                    </div>
+                </div>
+
+                <h2>Schedule Appointment</h2>
+                <div class="calendar" id="calendar"></div>
+
+                <div class="booking-form">
+                    <div class="form-group">
+                        <label>Client</label>
+                        <select id="clientName">
+                            <option value="">Select client</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tattoo Artist</label>
+                        <select id="artist">
+                            <option value="">Select artist</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Time</label>
+                        <select id="time">
+                            <option value="">Select time</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tattoo Style</label>
+                        <select id="style">
+                            <option value="">Select style</option>
+                            <option value="traditional"> Body piercings</option>
+                            <option value="realism">Lip micro blading</option>
+                            <option value="minimalist">Permanent tattoos</option>
+                            
+                        </select>
+                    </div>
+
+                    <button id="bookBtn">Book Appointment</button>
+                </div>
+
+                <div class="bookings-list" id="bookingsList">
+                    <h3>Upcoming Bookings</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <p id="notificationMessage"></p>
+        <button id="closeNotification">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
